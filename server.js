@@ -2,8 +2,10 @@ const express = require('express')
 const bodyparser = require('body-parser')
 const bcrypt = require('bcrypt');
 
+const cors = require('cors');
 const app = express();
 app.use(bodyparser.json());
+app.use(cors())
 
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
